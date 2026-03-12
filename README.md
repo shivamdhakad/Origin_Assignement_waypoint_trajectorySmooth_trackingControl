@@ -2,7 +2,8 @@
 
 A complete implementation of **path smoothing**, **trajectory generation**, and **trajectory tracking** for a differential drive robot (Turtlebot3) in ROS2.
 Simulation: https://drive.google.com/file/d/1J1ojwpW5FAjtNpwLgEBMjq5VEbBBPjYb/view?usp=sharing
-<iframe src="[https://www.googledrive.com...](https://drive.google.com/file/d/1J1ojwpW5FAjtNpwLgEBMjq5VEbBBPjYb/view?usp=sharing)" width="640" height="480"></iframe>
+<iframe src="https://drive.google.com/file/d/1J1ojwpW5FAjtNpwLgEBMjq5VEbBBPjYb/view?usp=sharing" width="640" height="480"></iframe>
+[Watch the Demo](https://drive.google.com/file/d/1J1ojwpW5FAjtNpwLgEBMjq5VEbBBPjYb/view?usp=sharing)
 
 ---
 
