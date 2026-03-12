@@ -1,0 +1,44 @@
+# ============================================================
+# Path Smoother — ROS2 Parameter Configuration
+# ============================================================
+# Waypoints are in a SEPARATE file: config/waypoints.yaml
+# Edit waypoints using:  python3 waypoint_editor.py
+# ============================================================
+
+trajectory_generator_node:
+  ros__parameters:
+    # Maximum cruise speed in m/s (Turtlebot3 Burger max: 0.22 m/s)
+    max_velocity: 0.22
+    # Linear acceleration in m/s²
+    acceleration: 0.10
+    frame_id: "odom"
+
+    # ── Trajectory YAML save ──────────────────────────────────────────────────
+    # Set to true  → trajectory points written to trajectory_yaml_path after
+    #                generation, in format: [(x, y, t), ...]
+    # Set to false → file is never written (zero overhead)
+    # To disable from code instead, comment the marked block in
+    # trajectory_generator_node.py (search: TRAJECTORY YAML SAVE)
+    save_trajectory_yaml: true
+    trajectory_yaml_path: "config/trajectory_points.yaml"
+    # ── End trajectory YAML save ──────────────────────────────────────────────
+
+path_smoother_node:
+  ros__parameters:
+    # Number of points to sample along the smooth spline
+    # num_samples: 500
+    num_samples: 50
+    # TF frame for all published paths/markers
+    frame_id: "odom"
+
+trajectory_tracker_node:
+  ros__parameters:
+    lookahead_distance: 0.3
+    max_linear_vel: 0.22
+    max_angular_vel: 2.84
+    goal_tolerance: 0.1
+    control_frequency: 20.0
+    apf_k_att: 1.0
+    apf_k_rep: 0.5
+    apf_d_safe: 0.5
+    apf_influence: 0.4

@@ -1,0 +1,19 @@
+# ============================================================
+# Waypoints Configuration
+# ============================================================
+# Edit this file to change the robot's path.
+# Format: flat array [x0, y0, x1, y1, ...] (ROS2 requirement)
+#
+# Original assignment format:
+# waypoints = [(0.0, 0.0), (1.0, 0.5), (2.0, 1.2), (3.0, 1.0), (4.0, 0.0)]
+#
+# Total waypoints: 5
+# ============================================================
+
+path_smoother_node:
+  ros__parameters:
+    waypoints: [-2.0, -0.5,
+                0.0, -0.5,
+                1.0, -0.5,
+                1.5, -0.5,
+                1.5, 0.5]
